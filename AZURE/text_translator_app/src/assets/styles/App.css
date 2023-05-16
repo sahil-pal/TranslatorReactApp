@@ -1,0 +1,416 @@
+/* Global Setting */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline:none;
+    border: none;
+}
+  ul{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
+  body{
+    width: 100%;
+    font-family: Epilogue;
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 33%, rgba(238,174,202,1) 98%);
+    background-repeat: no-repeat;
+  }
+  
+  /* Helper classes */
+  .row{
+    display: flex;
+  }
+  .flex-col{
+    display: flex;
+    flex-direction: column;
+  }
+  .align-item-center{
+    align-items: center;
+  }
+  .justify-start{
+    justify-content: flex-start;
+  }
+  .space-between{
+    justify-content: space-between;
+  }
+  .space-around{
+    justify-content: space-around;
+  }
+  .justify-center{
+    justify-content: center;
+  }
+  .justify-end{
+    justify-content: flex-end;
+  }
+  .grid{
+    display: grid;
+  }
+  .w-100{
+    width: 100%;
+  }
+  .text-center{
+    text-align: center;
+  }
+
+  /* Generic */
+
+.container{
+  width: 1200px;
+  margin: 0px auto;
+}
+@media screen and (max-width: 450px) {
+  .container{
+    width: 320px;
+    margin: 0px auto;
+  }
+}
+
+
+/* Header */
+
+header{
+  padding: 10px 15px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+}
+header h1{
+    margin: 5px 0px;
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+header img{
+  height:50px;
+  width: 110px;
+}
+@media screen and (max-width: 450px) {
+  header h1{
+    font-size: 18px;
+  }
+  header img{
+    height:25px;
+    width: 55px;
+  }
+}
+
+/* File Upload */
+
+#file-upload{
+  margin-top: 5%;
+  padding: 3% 1%;
+  text-align: center;
+}
+#file-upload h1{
+  font-size: 55px;
+  font-family: 'Lato', sans-serif;
+}
+#file-upload span{
+  margin: 10px 0px;
+  display: block;
+  color: #6B7280;
+  font-size: 20px;
+  font-weight: 400;
+}
+#file-upload button,#model-content button,#result button{
+  height: 45px;
+  width: 210px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  background-color: black;
+  font-family: Epilogue;
+  border-radius: 20px;
+}
+#result button{
+  background-color: green;
+}
+#result button:hover{
+  background-color: rgb(24, 188, 24);
+}
+#file-upload button:hover{
+  background-color: white;
+  color: black;
+}
+#model-content button:hover{
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 450px) {
+  #file-upload{
+    margin: 15% 0px;
+  }
+  #file-upload h1{
+    font-size: 30px;
+  }
+  #file-upload span{
+    font-size: 12px;
+  }
+  #file-upload button,#model-content button,#result button{
+    width: 150px;
+    height: 30px;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+/* Steps */
+
+#steps{
+  width: 98%;
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+}
+#steps .step-box h2{
+  font-weight: 500;
+}
+#steps .step-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: white;
+  width: 31.5%;
+  margin: 1%;
+  padding: 2% 1%;
+}
+
+#steps .step-box img{
+  margin: 20px 30px;
+  width: 300px;
+  height: 270px;
+  object-fit: fill;
+}
+
+#steps .step-box p{
+  padding: 20px 10px;
+}
+
+#steps .step-box .desc-text{
+  margin: 2px 0px;
+  padding: 4px 0px;
+  color: #6B7280;
+}
+@media screen and (max-width: 450px){
+  #steps{
+    flex-direction: column;
+  }
+  #steps .step-box{
+    width: 98%;
+    margin: 1%;
+    padding: 5%;
+    text-align: center;
+  }
+  #steps .step-box h2{
+    font-size: 18px;
+  }
+  #steps .step-box p{
+    font-size: 12px;
+  }
+  #steps .step-box img{
+    margin: 20px 30px;
+    width: 120px;
+    height: 100px;
+  }
+}
+
+/* Footer */
+
+footer{
+  background-color: white;
+  height: 40px;
+  padding: 10px 0px;
+}
+
+footer h3{
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (max-width: 450px){
+  footer h3{
+    font-size: 12px;
+  }
+}
+
+/* Upload Modal */
+#model-content select{
+  padding: 0px 5px;
+  margin: 0px 20px;
+  width: 180px;
+  height: 35px;
+  background-color: rgba(16, 114, 144, 0.894);
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: Epilogue;
+}
+
+#model-content .row{
+  margin: 20px 0px;
+}
+
+#form-file-upload {
+  height: 16rem;
+  width: 28rem;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  left: 8%;
+  top: 0px;
+  margin: 5% 0px 20% 0px;
+}
+
+#input-file-upload {
+  display: none;
+}
+
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  background-color: transparent;
+}
+
+.upload-button:hover {
+  text-decoration-line: underline;
+}
+
+#loading-img img{
+  height: 100%;
+  width: 100%;
+}
+
+#result-message{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#result-message > button{
+  background-color: rgb(24, 188, 24);
+}
+#result-message > button:hover{
+  background-color: aquamarine;
+}
+
+#error img{
+  height: 780px;
+  width: 100%;
+  object-fit: contain;
+}
+.message-head{
+  font-size : 1.8rem;
+  color : green;
+}
+
+@media screen and (max-width: 450px){
+  #model-content .row{
+    flex-wrap: wrap;
+  }
+  #model-content{
+    text-align: center;
+  }
+  #model-content select{
+    font-size: 12px;
+    height: 20px;
+    width: 100px;
+    margin: 10px 0px;
+  }
+  #form-file-upload{
+    font-size: 12px;
+  }
+  #label-file-upload{
+    width: 90%;
+    height: 220px;
+    padding: 10px;
+  }
+  #model-content h3{
+    font-size: 12px;
+  }
+  #model-op button{
+    width: 95%;
+    margin-top: 10px;
+  }
+  .message-head{
+    font-size: 1rem;
+  }
+}
+
+/* Result page */
+
+#result{
+  margin: 10% auto;
+}
+#result h1 {
+  font-size: 45px;
+}
+#result .result-box{
+  width: 48%;
+  margin: 2% auto;
+  padding: 2%;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+#result .result-box h2{
+  font-size: 28px;
+  text-align: center;
+  margin: 4px 0px;
+}
+#result .result-box textarea{
+  padding: 2px 10px;
+  min-height: 275px;
+  font-size: 20px;
+  font-family: Epilogue;
+  width: 33rem;
+}
+@media screen and (max-width: 450px){
+  #result{
+    margin: 20% auto 0px auto;
+  }
+  #result h1{
+    font-size: 24px;
+  }
+  #result .row{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 2px auto;
+  }
+  #result .result-box{
+    width: 100%;
+  }
+  #result .result-box textarea{
+    min-height: 285px;
+    font-size: 12px;
+    width: 18rem;
+  }
+  #result .result-box h2{
+    font-size: 20px;
+  }
+  
+}
